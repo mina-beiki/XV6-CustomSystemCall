@@ -546,12 +546,16 @@ getProcCount(void)
   struct proc *p;
   int counter=0;
 
-  acquire(&ptable.lock);
   for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
     if(p->state != UNUSED){
       counter = counter+1;
     }
   }
-  release(&ptable.lock);
   return counter;
+}
+
+int
+getReadCount(int readCount)
+{
+  return readCount;
 }

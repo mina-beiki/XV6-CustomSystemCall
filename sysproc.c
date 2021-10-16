@@ -107,5 +107,5 @@ sys_getProcCount(void)
 int
 sys_getReadCount(void)
 {
-  return readCount;
+  return getReadCount(readCount);
 }

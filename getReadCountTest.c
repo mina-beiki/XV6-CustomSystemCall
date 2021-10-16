@@ -5,6 +5,7 @@
 
 int main(void)
 {
-    printf(1, "Number of processes: %d", getProcCount);
+    int result = getReadCount();
+    printf(1, "Number of reads: %d", result);
     exit();
 }
